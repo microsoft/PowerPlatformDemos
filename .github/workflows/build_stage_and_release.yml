@@ -10,7 +10,7 @@ on:
       solution_name:
         description: 'name of the solution to worked on from Power Platform'
         required: true
-        default: PowerDemo
+        default: MixedRealityWorkshop
        #Do Not change these values
       solution_shipping_folder:
         description: 'folder name for staging the exported solution *do not change*'
@@ -19,11 +19,11 @@ on:
       solution_outbound_folder:
         description: 'staging the unpacked solution folder before check-in *do not change*'
         required: true
-        default: out/solutions/
+        default: out/solution/
       solution_source_folder: 
        description: 'folder name to be created and checked in *do not change*'
        required: true
-       default: solutions/
+       default: solution/
       solution_release_folder:
        description: 'folder where the released binaries are going to be hosted *do not change*'
        required: true
