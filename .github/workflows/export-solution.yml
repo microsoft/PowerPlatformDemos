@@ -48,7 +48,10 @@ jobs:
         app-id: ${{env.CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{env.TENANT_ID}}
-
+    - name: cleanup staging area
+      run: |
+        Remove-Item -Recurse ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+      shell: pwsh
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
