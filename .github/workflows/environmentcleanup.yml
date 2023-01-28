@@ -20,7 +20,7 @@ env:
   TENANT_ID: 'ec6b17bb-11d0-4195-abd0-521c69a5d1fd'
 
 jobs:
-  Remove-solutions-from-dev-and-prod:
+  Remove-solutions-from-qa-and-prod:
     runs-on: windows-latest
     # or you can say runs-on: ubuntu-latest
     env:
