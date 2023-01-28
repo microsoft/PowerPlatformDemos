@@ -27,7 +27,7 @@ env:
 #edit your values here
   ENVIRONMENT_URL: 'https://contososales.crm.dynamics.com/'
   CLIENT_ID: 'd4416ad8-8ed5-4776-95b7-80985180bcc0'
-  TENANT_ID: 'c6b17bb-11d0-4195-abd0-521c69a5d1fd'
+  TENANT_ID: 'ec6b17bb-11d0-4195-abd0-521c69a5d1fd'
 
 jobs:
   export-from-dev:
