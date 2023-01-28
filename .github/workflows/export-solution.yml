@@ -71,9 +71,7 @@ jobs:
         solution-type: 'Unmanaged'
         overwrite-files: true
         
-    - name: cleanup staging area
-      run: |
-        git rm ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+   
         
         
     - name: Commit changes
