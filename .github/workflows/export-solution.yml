@@ -14,11 +14,11 @@ on:
       solution_exported_folder:
         description: 'folder name for staging the exported solution *do not change*'
         required: true
-        default: ${{github.event.repository.name}}
+        default: ${{github.repository}}
       solution_folder:
         description: 'staging the unpacked solution folder before check-in *do not change*'
         required: true
-        default: ${{github.event.repository.name}}
+        default: ${{github.repository}}
       solution_target_folder: 
        description: 'folder name to be created and checked in *do not change*'
        required: true
