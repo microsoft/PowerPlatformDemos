@@ -14,15 +14,15 @@ on:
       solution_exported_folder:
         description: 'folder name for staging the exported solution *do not change*'
         required: true
-        default: out/exported/
+        default: out/exported
       solution_folder:
         description: 'staging the unpacked solution folder before check-in *do not change*'
         required: true
-        default: out/solution/
+        default: out/solution
       solution_target_folder: 
        description: 'folder name to be created and checked in *do not change*'
        required: true
-       default: solution/
+       default: solution
 env:
 #edit your values here
   ENVIRONMENT_URL: 'https://contososales.crm.dynamics.com/'
@@ -50,8 +50,8 @@ jobs:
         tenant-id: ${{env.TENANT_ID}}
     - name: cleanup staging area
       run: |
-        Remove-Item -Recurse ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
-      shell: pwsh
+        git rm ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
+    
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
@@ -70,6 +70,10 @@ jobs:
         solution-folder: ${{ github.event.inputs.solution_folder}}/${{ github.event.inputs.solution_name }}
         solution-type: 'Unmanaged'
         overwrite-files: true
+        
+    - name: cleanup staging area
+      run: |
+        git rm ${{ github.event.inputs.solution_exported_folder}}/${{ github.event.inputs.solution_name }}.zip
         
         
     - name: Commit changes
