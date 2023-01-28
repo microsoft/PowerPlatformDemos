@@ -1,6 +1,6 @@
 name: clean up 
-# Export solution from DEV environment
-#  unpack it and prepare, commit and push a git branch with the changes
+# clean up the environment for the next demo
+#  clean up environment tasks for QA and Prod 
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ env:
   TENANT_ID: 'ec6b17bb-11d0-4195-abd0-521c69a5d1fd'
 
 jobs:
-  export-from-dev:
+  Remove-solutions-from-dev-and-prod:
     runs-on: windows-latest
     # or you can say runs-on: ubuntu-latest
     env:
