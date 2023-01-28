@@ -1,4 +1,4 @@
-name: export-and-branch-solution
+name: export-solution-on-main
 # Export solution from DEV environment
 #  unpack it and prepare, commit and push a git branch with the changes
 
