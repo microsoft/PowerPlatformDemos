@@ -1,0 +1,51 @@
+name: clean up 
+# clean up the environment for the next demo
+#  clean up environment tasks for QA and Prod 
+
+on:
+  workflow_dispatch:
+    inputs:
+      # Change this value
+      solution_name:
+        description: 'name of the solution to worked on from Power Platform'
+        required: true
+        default: MixedRealityWorkshop
+       #Do Not change these values
+      
+env:
+#edit your values here
+  BUILD_ENVIRONMENT_URL: 'https://contososales-qa.crm.dynamics.com/'
+  PRODUCTION_ENVIRONMENT_URL: 'https://contososalesprod.crm.dynamics.com/'
+  CLIENT_ID: 'd4416ad8-8ed5-4776-95b7-80985180bcc0'
+  TENANT_ID: 'ec6b17bb-11d0-4195-abd0-521c69a5d1fd'
+
+jobs:
+  Remove-solutions-from-qa-and-prod:
+    runs-on: windows-latest
+    # or you can say runs-on: ubuntu-latest
+    env:
+      RUNNER_DEBUG: 1
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        lfs: true
+        
+    - name: delete solution in QA
+      uses: microsoft/powerplatform-actions/delete-solution@v0
+      with:
+        environment-url: ${{env.BUILD_ENVIRONMENT_URL}}
+        app-id: ${{env.CLIENT_ID}}
+        client-secret: ${{ secrets.PowerPlatformSPN }}
+        tenant-id: ${{env.TENANT_ID}}
+        solution-name: ${{ github.event.inputs.solution_name }}
+        
+    - name: delete solution in Prod
+      uses: microsoft/powerplatform-actions/delete-solution@v0
+      with:
+        environment-url: ${{env.PRODUCTION_ENVIRONMENT_URL}}
+        app-id: ${{env.CLIENT_ID}}
+        client-secret: ${{ secrets.PowerPlatformSPN }}
+        tenant-id: ${{env.TENANT_ID}}
+        solution-name: ${{ github.event.inputs.solution_name }}
+    
