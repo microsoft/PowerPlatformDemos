@@ -1,0 +1,15 @@
+<environmentvariabledefinition schemaname="ppa_MRSharePointList">
+  <apiid>/providers/microsoft.powerapps/apis/shared_sharepointonline</apiid>
+  <displayname default="MR SharePoint List">
+    <label description="MR SharePoint List" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.3</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <parameterkey>table</parameterkey>
+  <parentdefinitionid>
+    <schemaname>ppa_MRSharePointSite</schemaname>
+  </parentdefinitionid>
+  <secretstore>0</secretstore>
+  <type>100000004</type>
+</environmentvariabledefinition>
