@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ppa_mixedrealityapp_8c5e9</Name>
+  <AppVersion>2023-02-14T05:49:19Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.23015.14.0</CreatedByClientVersion>
+  <MinClientVersion>3.23015.14.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.23015.14","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20230127T221232Z-3.22091.11.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>Mixed Reality App</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"003c10bb-0e9a-4c4b-805d-593afc9cb727":{"id":"/providers/microsoft.powerapps/apis/shared_ppa-5fsmithsonian-203d-5fab28f75250869467","displayName":"Smithsonian 3D","iconUri":"https://az787822.vo.msecnd.net/defaulticons/api-dedicated.png","dataSources":["Smithsonian3D"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["FileSearch"],"customApiLogicalName":"ppa_5Fsmithsonian-203d","isCustomApiSolutionAware":true},"d43123ba-e8f2-447b-ba67-95bb08416c14":{"id":"/providers/microsoft.powerapps/apis/shared_excel","displayName":"Excel","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1618/1.0.1618.3179/excel/icon.png","dataSources":["Coral","Occupants"],"dependencies":["6fa5a1c4-e985-41c3-9c4b-7236d440bcc6"],"dependents":[],"parameterHints":{"6fa5a1c4-e985-41c3-9c4b-7236d440bcc6":{"value":"fileSource"}},"parameterHintsV2":{"fileSource":{"value":"6fa5a1c4-e985-41c3-9c4b-7236d440bcc6"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"b!FKD48SnMwkiQquwCvEhBuFbtK_1Yc6NOiNCn_VBrSz06Qq2xtlVsQ5IFVrJbPN80.01WWEI5KFJT6ISBTZVXVA3NAAWT6TGMHHC":{"dataSources":{"Coral":{"tableName":"Coral"},"Occupants":{"tableName":"Occupants"}}}},"apiTier":"Standard","actions":["providers/PowerPlatform.Governance/Operations/Read"],"isCustomApiSolutionAware":false},"6fa5a1c4-e985-41c3-9c4b-7236d440bcc6":{"id":"/providers/microsoft.powerapps/apis/shared_onedriveforbusiness","displayName":"OneDrive for Business","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1546/1.0.1546.2665/onedriveforbusiness/icon.png","dataSources":[],"dependencies":[],"dependents":["d43123ba-e8f2-447b-ba67-95bb08416c14"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","isCustomApiSolutionAware":false}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[{"appComponentName":"2e88179d732a402184a767c94eab038b","appName":"d6119900-aa0d-4659-8d27-0f8672b3dbc5","appComponentLibraryName":"37f1047d-c520-4369-afb7-5db6fb5cfaf1","appComponentLibraryVersion":"2023-01-27T21:05:10Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","environmentName":"07d52cc4-54ab-e166-abe0-36b94c41e613"},{"appComponentName":"44e7951b1fad4ad98126f8c108dd1e9f","appName":"d6119900-aa0d-4659-8d27-0f8672b3dbc5","appComponentLibraryName":"37f1047d-c520-4369-afb7-5db6fb5cfaf1","appComponentLibraryVersion":"2023-01-27T21:05:10Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","environmentName":"07d52cc4-54ab-e166-abe0-36b94c41e613"},{"appComponentName":"6da4b2f929d240969e49e05e10e720ce","appName":"d6119900-aa0d-4659-8d27-0f8672b3dbc5","appComponentLibraryName":"37f1047d-c520-4369-afb7-5db6fb5cfaf1","appComponentLibraryVersion":"2023-01-27T21:05:10Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","environmentName":"07d52cc4-54ab-e166-abe0-36b94c41e613"},{"appComponentName":"952d39d80fc84420b772a5058b19d909","appName":"d6119900-aa0d-4659-8d27-0f8672b3dbc5","appComponentLibraryName":"37f1047d-c520-4369-afb7-5db6fb5cfaf1","appComponentLibraryVersion":"2023-01-27T21:05:10Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","environmentName":"07d52cc4-54ab-e166-abe0-36b94c41e613"}]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"ppa_5Fsmithsonian-203d","componenttype":372,"componenttypeplatformname":"connector"},{"logicalname":"cat_powercatcomponentlibrary_0be3a","componenttype":300,"componenttypeplatformname":"CanvasApp"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/ppa_mixedrealityapp_8c5e9_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/ppa_mixedrealityapp_8c5e9_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

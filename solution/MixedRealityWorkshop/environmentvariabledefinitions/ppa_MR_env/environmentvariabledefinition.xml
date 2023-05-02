@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="ppa_MR_env">
+  <description default="This is my environment variable to identify MR Env">
+    <label description="This is my environment variable to identify MR Env" languagecode="1033" />
+  </description>
+  <displayname default="MR_env">
+    <label description="MR_env" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.1</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>
