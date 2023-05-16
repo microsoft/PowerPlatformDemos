@@ -24,18 +24,11 @@ on:
         description: 'Build environment url.'
         type: string
         required: true      
-      PRODUCTION_ENVIRONMENT_URL: 
+      QA_ENVIRONMENT_URL: 
         description: 'Production environment url.'
         type: string
         required: true
-      CLIENT_ID: 
-        description: 'The client id'
-        type: string
-        required: true
-      TENANT_ID: 
-        description: 'The tenant id'
-        type: string
-        required: true
+      
     secrets:
       envSecret:
         description: 'The secret value for authentication using SPN'
@@ -66,9 +59,9 @@ jobs:
      # uses: microsoft/powerplatform-actions/import-solution@v0
       #with:
        # environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
-        #app-id: ${{inputs.CLIENT_ID}}
+        #app-id: ${{secrets.CLIENT_ID}}
         #client-secret: ${{ secrets.envSecret }}
-        #tenant-id: ${{inputs.TENANT_ID}}
+        #tenant-id: ${{secrets.TENANT_ID}}
         #solution-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}.zip
         #force-overwrite: true
         #publish-changes: true
@@ -77,10 +70,10 @@ jobs:
      # uses: microsoft/powerplatform-actions/export-solution@v0
       #with:
        # environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
-        #app-id: ${{inputs.CLIENT_ID}}
+        #app-id: ${{secrets.CLIENT_ID}}
         #client-secret: ${{ secrets.envSecret }} 
         #tenant-id: ${{inputs.TENANT_ID}}
-        #solution-name: ${{ inputs.solution_name }}
+        #solution-name: ${{ secrets.solution_name }}
         #managed: false
         #solution-output-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}_managed.zip
 
@@ -110,9 +103,9 @@ jobs:
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
         environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
-        app-id: ${{inputs.CLIENT_ID}}
+        app-id: ${{secrets.CLIENT_ID}}
         client-secret: ${{ secrets.envSecret }}
-        tenant-id: ${{inputs.TENANT_ID}}
+        tenant-id: ${{secrets.TENANT_ID}}
         solution-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}_managed.zip
         force-overwrite: true
         publish-changes: true
