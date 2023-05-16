@@ -9,7 +9,7 @@ on:
       solution_name:
         description: 'name of the solution to worked on from Power Platform'
         required: true
-        default: InventoryOnHand
+        default: IncidentApp
        
       
     
