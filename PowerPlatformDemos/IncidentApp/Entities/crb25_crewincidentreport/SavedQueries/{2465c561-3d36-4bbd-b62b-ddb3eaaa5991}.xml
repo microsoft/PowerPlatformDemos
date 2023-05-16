@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{2465c561-3d36-4bbd-b62b-ddb3eaaa5991}</savedqueryid>
+    <layoutxml>
+      <grid name="crb25_crewincidentreports" jump="crb25_incidentid" select="1" icon="1" preview="1">
+        <row name="crb25_crewincidentreport" id="crb25_crewincidentreportid">
+          <cell name="crb25_incidentid" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="crb25_crewincidentreport">
+          <attribute name="crb25_crewincidentreportid" />
+          <attribute name="crb25_incidentid" />
+          <attribute name="createdon" />
+          <order attribute="crb25_incidentid" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Crew Incident Report Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
