@@ -11,6 +11,11 @@ jobs:
   Release-solution-qa:
     uses: ./.github/workflows/release-solution-to-qa.yml
     
+      with:
+          BUILD_ENVIRONMENT_URL: https://org56109a41.crm.dynamics.com/
+          QA_ENVIRONMENT_URL: https://org56109a41.crm.dynamics.com/
+    
+    
 
     
       
