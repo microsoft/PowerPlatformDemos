@@ -11,7 +11,7 @@ on:
       solution_name:
         description: 'The solution name.'
         type: string
-        default: InventoryOnHand
+        default: IncidentApp
       root_folder:
         description: 'name of the folder where the solution is going unpacked'
         type: string
