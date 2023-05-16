@@ -14,7 +14,7 @@ jobs:
       #You can specify the solution name here
       solution_name: IncidentApp
       #Update your values here
-      BUILD_ENVIRONMENT_URL: https://org93ed637c.crm.dynamics.com/ 
+      BUILD_ENVIRONMENT_URL: https://org56109a41.crm.dynamics.com/ 
       QA_ENVIRONMENT_URL: https://org56109a41.crm.dynamics.com/
 
     
