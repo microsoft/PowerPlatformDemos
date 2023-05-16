@@ -104,7 +104,7 @@ jobs:
       with:
         environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
         app-id: ${{secrets.CLIENT_ID}}
-        client-secret: ${{ secrets.envSecret }}
+        client-secret: ${{ secrets.POWERPLATFORMSPN }}
         tenant-id: ${{secrets.TENANT_ID}}
         solution-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}_managed.zip
         force-overwrite: true
