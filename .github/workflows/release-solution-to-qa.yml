@@ -31,52 +31,6 @@ permissions:
   contents: write
 
 jobs:
-  #convert-to-managed:
-   # runs-on: ubuntu-latest
-    # or you can say runs-on: ubuntu-latest
-    #env:
-     # RUNNER_DEBUG: 1
-
-    #steps:
-    #- uses: actions/checkout@v3
-     # with:
-      #  lfs: true
-
-    #- name: Pack solution
-     # uses: microsoft/powerplatform-actions/pack-solution@v0
-      #with:
-       # solution-folder: ${{ inputs.root_folder}}/${{ inputs.solution_name }}
-        #solution-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}.zip
-        #solution-type: Unmanaged
-
-    #- name: Import solution as unmanaged to build env
-     # uses: microsoft/powerplatform-actions/import-solution@v0
-      #with:
-       # environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
-        #app-id: ${{secrets.CLIENT_ID}}
-        #client-secret: ${{ secrets.envSecret }}
-        #tenant-id: ${{secrets.TENANT_ID}}
-        #solution-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}.zip
-        #force-overwrite: true
-        #publish-changes: true
-
-    #- name: Export solution as managed
-     # uses: microsoft/powerplatform-actions/export-solution@v0
-      #with:
-       # environment-url: ${{inputs.BUILD_ENVIRONMENT_URL}}
-        #app-id: ${{secrets.CLIENT_ID}}
-        #client-secret: ${{ secrets.envSecret }} 
-        #tenant-id: ${{inputs.TENANT_ID}}
-        #solution-name: ${{ secrets.solution_name }}
-        #managed: false
-        #solution-output-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}_managed.zip
-
-    #- name: Upload the ready to ship solution to GH artifact store
-     # uses: actions/upload-artifact@v2
-      #with:
-       # name: managedSolutions
-        #path: ${{ inputs.zip_folder}}/
-
   release-to-qa:
     #needs: [ convert-to-managed ]
     runs-on: ubuntu-latest
@@ -94,11 +48,7 @@ jobs:
         app-id: ${{secrets.CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
         tenant-id: ${{secrets.TENANT_ID}}
-   # - name: Fetch the ready to ship solution from GH artifact store
-    #  uses: actions/download-artifact@v2
-     # with:
-      #  name: managedSolutions
-       # path: ${{ inputs.zip_folder}}
+   
     - name: Import solution to test env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
