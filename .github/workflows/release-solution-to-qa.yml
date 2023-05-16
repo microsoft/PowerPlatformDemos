@@ -93,7 +93,13 @@ jobs:
     - uses: actions/checkout@v3
       with:
         lfs: true
-
+    - name: who-am-i action
+      uses: microsoft/powerplatform-actions/who-am-i@v0
+      with:
+        environment-url: ${{inputs.QA_ENVIRONMENT_URL}}
+        app-id: ${{secrets.CLIENT_ID}}
+        client-secret: ${{ secrets.PowerPlatformSPN }}
+        tenant-id: ${{secrets.TENANT_ID}}
    # - name: Fetch the ready to ship solution from GH artifact store
     #  uses: actions/download-artifact@v2
      # with:
@@ -102,9 +108,9 @@ jobs:
     - name: Import solution to test env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: ${{inputs.PRODUCTION_ENVIRONMENT_URL}}
+        environment-url: ${{inputs.QA_ENVIRONMENT_URL}}
         app-id: ${{ secrets.CLIENT_ID }}
-        client-secret: ${{ secrets.POWERPLATFORMSPN }}
+        client-secret: ${{ ecrets.PowerPlatformSPN  }}
         tenant-id: ${{ secrets.TENANT_ID }}
         solution-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}_managed.zip
         force-overwrite: true
