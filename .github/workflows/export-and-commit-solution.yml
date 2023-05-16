@@ -16,7 +16,7 @@ on:
       
 env:
 #edit your values here
-  ENVIRONMENT_URL: 'https://msbuild2023-dev.crm.dynamics.com/'
+  ENVIRONMENT_URL: 'https://org93ed637c.crm.dynamics.com/'
 
 permissions:
   contents: write
