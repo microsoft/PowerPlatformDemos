@@ -30,10 +30,7 @@ on:
         required: true
         default: https://org56109a41.crm.dynamics.com/
       
-    secrets:
-      envSecret:
-        description: 'The secret value for authentication using SPN'
-        required: true
+  
 permissions:
   contents: write
 
@@ -97,10 +94,10 @@ jobs:
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
-        environment-url: ${{inputs.QA_ENVIRONMENT_URL}}
-        app-id: ${{secrets.CLIENT_ID}}
+        environment-url: ${{ inputs.QA_ENVIRONMENT_URL }}
+        app-id: ${{ secrets.CLIENT_ID }}
         client-secret: ${{ secrets.PowerPlatformSPN }}
-        tenant-id: ${{secrets.TENANT_ID}}
+        tenant-id: ${{ secrets.TENANT_ID }}
    # - name: Fetch the ready to ship solution from GH artifact store
     #  uses: actions/download-artifact@v2
      # with:
