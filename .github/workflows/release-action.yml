@@ -1,0 +1,23 @@
+name: release action
+# Call the reusable workflow release-solution-with-inputs.yml
+# Release your solution to prod when you create a new release.
+
+on:
+  release:
+      types: [created]        
+permissions:
+  contents: write
+jobs:
+  Release-solution-qa:
+    uses: ./.github/workflows/release-solution-with-githubvars.yml
+    with:
+      #You can specify the solution name here
+      solution_name: InventoryOnHand
+      #Update your values here
+      BUILD_ENVIRONMENT_URL: https://msbuild2023-build.crm.dynamics.com/ 
+      PRODUCTION_ENVIRONMENT_URL: https://msbuild2023-test.crm.dynamics.com/
+      CLIENT_ID: 32c5ecf8-c5dd-4bb9-adee-401a0d26e32e
+      TENANT_ID: b76e8d49-9a4e-4d86-a364-b254bbd31c37 
+      
+    secrets:
+      envSecret: ${{ secrets.PowerPlatformSPN }}
