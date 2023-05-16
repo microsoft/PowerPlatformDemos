@@ -110,7 +110,7 @@ jobs:
       with:
         environment-url: ${{inputs.QA_ENVIRONMENT_URL}}
         app-id: ${{ secrets.CLIENT_ID }}
-        client-secret: ${{ ecrets.PowerPlatformSPN  }}
+        client-secret: ${{ secrets.PowerPlatformSPN  }}
         tenant-id: ${{ secrets.TENANT_ID }}
         solution-file: ${{ inputs.zip_folder}}/${{ inputs.solution_name }}_managed.zip
         force-overwrite: true
