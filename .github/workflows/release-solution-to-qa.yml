@@ -20,11 +20,6 @@ on:
         description: 'name of the folder where the zip files reside'
         type: string
         default: ${{ github.event.repository.name }}
-      BUILD_ENVIRONMENT_URL:
-        description: 'Build environment url.'
-        type: string
-        required: true
-        default: https://org56109a41.crm.dynamics.com/
       QA_ENVIRONMENT_URL: 
         description: 'QA environment url.'
         type: string
