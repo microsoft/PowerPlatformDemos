@@ -9,7 +9,7 @@ permissions:
   contents: write
 jobs:
   Release-solution-qa:
-    uses: ./.github/workflows/release-solution-with-githubvars.yml
+    uses: ./.github/workflows/release-solution-to-qa.yml
     with:
       #You can specify the solution name here
       solution_name: IncidentApp
