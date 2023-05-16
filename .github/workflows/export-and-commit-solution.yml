@@ -17,8 +17,7 @@ on:
 env:
 #edit your values here
   ENVIRONMENT_URL: 'https://msbuild2023-dev.crm.dynamics.com/'
-  CLIENT_ID: '32c5ecf8-c5dd-4bb9-adee-401a0d26e32e'
-  TENANT_ID: 'b76e8d49-9a4e-4d86-a364-b254bbd31c37'
+
 permissions:
   contents: write
 jobs:
@@ -37,18 +36,18 @@ jobs:
       uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
-        app-id: ${{env.CLIENT_ID}}
+        app-id: ${{secrets.CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
-        tenant-id: ${{env.TENANT_ID}}
+        tenant-id: ${{secrets.TENANT_ID}}
 
 
     - name: export-solution action
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
-        app-id: ${{env.CLIENT_ID}}
+        app-id: ${{secrets.CLIENT_ID}}
         client-secret: ${{ secrets.PowerPlatformSPN }}
-        tenant-id: ${{env.TENANT_ID}}
+        tenant-id: ${{secrets.TENANT_ID}}
         solution-name: ${{ github.event.inputs.solution_name }}
         solution-output-file: ${{ github.event.repository.name}}/${{ github.event.inputs.solution_name }}_unmanaged.zip
         overwrite: true
@@ -65,9 +64,9 @@ jobs:
       uses: microsoft/powerplatform-actions/export-solution@v0
       with:
             environment-url: ${{env.ENVIRONMENT_URL}}
-            app-id: ${{env.CLIENT_ID}}
+            app-id: ${{secrets.CLIENT_ID}}
             client-secret: ${{ secrets.PowerPlatformSPN }}
-            tenant-id: ${{env.TENANT_ID}}
+            tenant-id: ${{secrets.TENANT_ID}}
             solution-name: ${{ github.event.inputs.solution_name }}
             solution-output-file: ${{ github.event.repository.name }}/${{ github.event.inputs.solution_name }}_managed.zip
             overwrite: true
