@@ -106,7 +106,7 @@ jobs:
     - name: Import solution to test env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: ${{inputs.QA_ENVIRONMENT_URL}}
+        environment-url: ${{ inputs.QA_ENVIRONMENT_URL }}
         app-id: ${{ secrets.CLIENT_ID }}
         client-secret: ${{ secrets.PowerPlatformSPN  }}
         tenant-id: ${{ secrets.TENANT_ID }}
