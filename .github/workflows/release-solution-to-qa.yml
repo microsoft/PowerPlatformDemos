@@ -97,7 +97,7 @@ jobs:
       with:
         environment-url: ${{ inputs.QA_ENVIRONMENT_URL }}
         app-id: ${{ secrets.CLIENT_ID }}
-        client-secret: ${{ secrets.PowerPlatformSPN }}
+        client-secret: ${{ secrets.PowerPlatformSPN  }}
         tenant-id: ${{ secrets.TENANT_ID }}
    # - name: Fetch the ready to ship solution from GH artifact store
     #  uses: actions/download-artifact@v2
